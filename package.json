@@ -1,0 +1,23 @@
+{
+  "name": "tomato-gacha",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hal-shu-sato/tomato-gacha.git",
+  "author": "ato lash",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "log4js": "^6.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
