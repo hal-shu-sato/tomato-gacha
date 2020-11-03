@@ -3,7 +3,7 @@ const normalGacha = (gachaEmojis, fes) => {
   if (fes) {
     if (r < 0.06) {
       return gachaEmojis.ssr;
-    } else if (r < 0.18) {
+    } else if (r < 0.06 + 0.12) {
       return gachaEmojis.sr;
     } else {
       return gachaEmojis.c;
@@ -11,7 +11,7 @@ const normalGacha = (gachaEmojis, fes) => {
   } else {
     if (r < 0.03) {
       return gachaEmojis.ssr;
-    } else if (r < 0.15) {
+    } else if (r < 0.03 + 0.12) {
       return gachaEmojis.sr;
     } else {
       return gachaEmojis.c;
@@ -35,10 +35,10 @@ const guaranteedGacha = (gachaEmojis, fes) => {
   }
 };
 const getGachaEmojis = async (logger, client) => {
-  const serverId = process.env.SERVER;
-  const ssrId = process.env.SSR;
-  const srId = process.env.SR;
-  const cId = process.env.C;
+  const serverId = process.env.TOMATO_SERVER;
+  const ssrId = process.env.TOMATO_SSR;
+  const srId = process.env.TOMATO_SR;
+  const cId = process.env.TOMATO_C;
   const guild = await client.guilds.fetch(serverId);
   const emojis = guild.emojis.cache;
   if (emojis) logger.debug("サーバー絵文字を取得しました。");

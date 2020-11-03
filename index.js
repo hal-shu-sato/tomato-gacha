@@ -6,6 +6,7 @@ const logger = log4js.getLogger();
 logger.level = "debug";
 const prefix = process.env.PREFIX;
 const tomato = require("./modules/tomato");
+const genshin = require("./modules/genshin");
 
 client.on("ready", () => {
   client.user.setActivity("プラチナトマトガシャ");
@@ -29,7 +30,7 @@ client.on("message", async (message) => {
     if (args[0] === "help") {
       const embed = tomato.help(Discord);
       message.channel.send(embed);
-      logger.info("ヘルプされました。");
+      logger.info("トマトヘルプされました。");
     } else if (args[0] === "fes") {
       const msg = await tomato.gacha(logger, client, true);
       message.channel.send(msg);
@@ -38,6 +39,22 @@ client.on("message", async (message) => {
       const msg = await tomato.gacha(logger, client, false);
       message.channel.send(msg);
       logger.info("トマトガシャが引かれました。");
+    }
+  } else if (command === "genshin") {
+    if (args[0] === "help") {
+      const embed = genshin.help(Discord);
+      message.channel.send(embed);
+      logger.info("原神ヘルプされました。");
+    } else if (args[0] === "5") {
+      // const msg = await genshin.gacha(logger, client, true);
+      const msg = "原神祈願は未実装です。";
+      message.channel.send(msg);
+      logger.info("☆5天井祈願が引かれました。");
+    } else {
+      // const msg = await genshin.gacha(logger, client, false);
+      const msg = "原神祈願は未実装です。";
+      message.channel.send(msg);
+      logger.info("☆4天井祈願が引かれました。");
     }
   }
 });
