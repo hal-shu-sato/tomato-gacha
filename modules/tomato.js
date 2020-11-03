@@ -50,15 +50,24 @@ const getGachaEmojis = async (logger, client) => {
 };
 
 module.exports = {
-  async gacha(logger, client, fes) {
+  async gacha(logger, client, fes, count = "10") {
     logger.debug(`フェスガシャは${fes}です。`);
     const gachaEmojis = await getGachaEmojis(logger, client);
     logger.debug(gachaEmojis);
-    const result = [];
-    for (let i = 0; i < 9; i++) result.push(normalGacha(gachaEmojis, fes));
-    result.push(guaranteedGacha(gachaEmojis, fes));
-    logger.debug(result);
-    return `${result[0]} ${result[1]} ${result[2]} ${result[3]} ${result[4]}\n${result[5]} ${result[6]} ${result[7]} ${result[8]} ${result[9]}`;
+    if (count === "10") {
+      const result = [];
+      for (let i = 0; i < 9; i++) result.push(normalGacha(gachaEmojis, fes));
+      result.push(guaranteedGacha(gachaEmojis, fes));
+      logger.debug(result);
+      return `${result[0]} ${result[1]} ${result[2]} ${result[3]} ${result[4]}\n${result[5]} ${result[6]} ${result[7]} ${result[8]} ${result[9]}`;
+    } else if (count === "1") {
+      const result = normalGacha(gachaEmojis, fes);
+      logger.debug(result);
+      return result;
+    } else {
+      logger.debug("トマトガシャの回数に不正な値が指定されました。");
+      return "回数は1回か10回を指定してください。";
+    }
   },
   help(Discord) {
     return new Discord.MessageEmbed()

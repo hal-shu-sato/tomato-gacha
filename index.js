@@ -32,11 +32,11 @@ client.on("message", async (message) => {
       message.channel.send(embed);
       logger.info("トマトヘルプされました。");
     } else if (args[0] === "fes") {
-      const msg = await tomato.gacha(logger, client, true);
+      const msg = await tomato.gacha(logger, client, true, args[1]);
       message.channel.send(msg);
       logger.info("トマトフェスガシャが引かれました。");
     } else {
-      const msg = await tomato.gacha(logger, client, false);
+      const msg = await tomato.gacha(logger, client, false, args[0]);
       message.channel.send(msg);
       logger.info("トマトガシャが引かれました。");
     }
@@ -46,12 +46,12 @@ client.on("message", async (message) => {
       message.channel.send(embed);
       logger.info("原神ヘルプされました。");
     } else if (args[0] === "5") {
-      // const msg = await genshin.gacha(logger, client, true);
+      // const msg = await genshin.gacha(logger, client, true, args[1]);
       const msg = "原神祈願は未実装です。";
       message.channel.send(msg);
       logger.info("☆5天井祈願が引かれました。");
     } else {
-      // const msg = await genshin.gacha(logger, client, false);
+      // const msg = await genshin.gacha(logger, client, false, args[0]);
       const msg = "原神祈願は未実装です。";
       message.channel.send(msg);
       logger.info("☆4天井祈願が引かれました。");

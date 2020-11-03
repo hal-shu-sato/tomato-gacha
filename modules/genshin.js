@@ -36,16 +36,25 @@ const getGachaEmojis = async (logger, client) => {
 };
 
 module.exports = {
-  async gacha(logger, client, fiveStar) {
+  async gacha(logger, client, fiveStar, count = "10") {
     if (!fiveStar) return "☆4祈願はガチャ確率が不明のため未実装です。";
     logger.debug(`☆5天井祈願は${fiveStar}です。`);
     const gachaEmojis = await getGachaEmojis(logger, client);
     logger.debug(gachaEmojis);
-    const result = [];
-    for (let i = 0; i < 9; i++) result.push(normalGacha(gachaEmojis));
-    result.push(guaranteedGacha(gachaEmojis, fiveStar));
-    logger.debug(result);
-    return `${result[0]} ${result[1]} ${result[2]} ${result[3]} ${result[4]}\n${result[5]} ${result[6]} ${result[7]} ${result[8]} ${result[9]}`;
+    if (count === "10") {
+      const result = [];
+      for (let i = 0; i < 9; i++) result.push(normalGacha(gachaEmojis));
+      result.push(guaranteedGacha(gachaEmojis, fiveStar));
+      logger.debug(result);
+      return `${result[0]} ${result[1]} ${result[2]} ${result[3]} ${result[4]}\n${result[5]} ${result[6]} ${result[7]} ${result[8]} ${result[9]}`;
+    } else if (count === "1") {
+      const result = normalGacha(gachaEmojis);
+      logger.debug(result);
+      return result;
+    } else {
+      logger.debug("原神祈願の回数に不正な値が指定されました。");
+      return "回数は1回か10回を指定してください。";
+    }
   },
   help(Discord) {
     return new Discord.MessageEmbed()
