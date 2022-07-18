@@ -6,7 +6,7 @@
   "author": "ato lash",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^12.3.1",
+    "discord.js": "^14.0.1",
     "dotenv": "^16.0.1",
     "log4js": "^6.6.0"
   },
