@@ -1,10 +1,13 @@
 {
   "name": "tomato-gacha",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/hal-shu-sato/tomato-gacha.git",
-  "author": "ato lash",
   "license": "MIT",
+  "author": "ato lash",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^16.4.5",
@@ -17,9 +20,6 @@
     "globals": "^15.12.0",
     "prettier": "^3.4.1",
     "prettier-plugin-packagejson": "^2.5.6"
-  },
-  "scripts": {
-    "start": "node index.js"
   },
   "packageManager": "yarn@1.22.22"
 }
