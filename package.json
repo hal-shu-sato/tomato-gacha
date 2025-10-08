@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "discord.js": "^14.22.1",
-    "dotenv": "^17.2.2",
+    "dotenv": "^17.2.3",
     "log4js": "^6.9.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.35.0",
-    "eslint": "^9.35.0",
+    "@eslint/js": "^9.37.0",
+    "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^16.4.0",
     "prettier": "^3.6.2",
