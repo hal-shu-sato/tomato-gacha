@@ -19,7 +19,7 @@
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.0.0",
     "prettier": "^3.7.4",
-    "prettier-plugin-packagejson": "^2.5.21"
+    "prettier-plugin-packagejson": "^2.5.22"
   },
   "packageManager": "yarn@1.22.22"
 }
