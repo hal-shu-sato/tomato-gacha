@@ -734,10 +734,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-plugin-packagejson@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-packagejson/-/prettier-plugin-packagejson-3.0.0.tgz#11f64b463b6da8c73ce86dabde529699cde3f6d8"
-  integrity sha512-z8/QmPSqx/ANvvQMWJSkSq1+ihBXeuwDEYdjX3ZjRJ5Ty1k7vGbFQfhzk2eDe0rwS/TNyRjWK/qnjJEStAOtDw==
+prettier-plugin-packagejson@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-packagejson/-/prettier-plugin-packagejson-3.0.1.tgz#457c25035a32de16930721f706c9645087f87473"
+  integrity sha512-dGMMVROGzziTdLlFNoOhJyDafp29ynxWLam7WPFX8O/iR0osRedi7ZAAz+Hy2//pXhLUrB9QvIQZjxpynQJzsw==
   dependencies:
     sort-package-json "3.6.0"
 
