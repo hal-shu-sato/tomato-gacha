@@ -7,7 +7,7 @@ Engilsh version is [here](https://github.com/hal-shu-sato/tomato-gacha/blob/main
 # 必要環境&ライブラリ
 
 - Node.js 12.18.4
-- npm 6.14.6 or yarn 1.22.4
+- pnpm 11.22.0
 - discord.js 12.3.1
 - log4js 6.3.0
 
@@ -24,11 +24,12 @@ Engilsh version is [here](https://github.com/hal-shu-sato/tomato-gacha/blob/main
 - SR：SR の絵文字 ID
 - C：C の絵文字 ID
 
-## Yarn
+## pnpm
 
 ```bash
 git clone https://github.com/hal-shu-sato/tomato-gacha.git
-yarn add
+cd tomato-gacha
+pnpm install
 ```
 
 ## NPM
@@ -42,13 +43,13 @@ npm install
 
 ## バッチ (簡単)
 
-Yarn を使用している場合、「start.bat」を起動してください。
+pnpm を使用している場合、「start.bat」を起動してください。
 
-## ターミナル (Yarn)
+## ターミナル (pnpm)
 
 ```bash
 cd tomato-gacha
-yarn run start
+pnpm run start
 ```
 
 ## ターミナル (NPM)

@@ -7,7 +7,7 @@ Tomato Gacha
 # Requirement
 
 - Node.js 12.18.4
-- npm 6.14.6 or yarn 1.22.4
+- pnpm 11.22.0
 - discord.js 12.3.1
 - log4js 6.3.0
 
@@ -24,11 +24,12 @@ Set the following environment variables.
 - SR: Emoji ID of SR
 - C: Emoji ID of C
 
-## Yarn
+## pnpm
 
 ```bash
 git clone https://github.com/hal-shu-sato/tomato-gacha.git
-yarn add
+cd tomato-gacha
+pnpm install
 ```
 
 ## NPM
@@ -42,13 +43,13 @@ npm install
 
 ## Batch (The easiest way)
 
-If you use yarn, run "start.bat"
+If you use pnpm, run "start.bat"
 
-## Bash (Yarn)
+## Bash (pnpm)
 
 ```bash
 cd tomato-gacha
-yarn run start
+pnpm run start
 ```
 
 ## Bash (NPM)
